@@ -1,6 +1,11 @@
 import sys
 
 def main():
+    '''
+    This program counts the number of characters in a string.
+    It counts the number of upper letters, lower letters, punctuation marks,
+    spaces, and digits in the string.
+    '''
     argc = len(sys.argv)
     assert argc <= 2, "more than one argument is provided"
 
