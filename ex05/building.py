@@ -1,5 +1,6 @@
 import sys
 
+
 def main():
     '''
     This program counts the number of characters in a string.
@@ -44,6 +45,7 @@ def main():
     print(f"{punctuation_count} punctuation marks")
     print(f"{spaces_count} spaces")
     print(f"{digits_count} digits")
+
 
 if __name__ == "__main__":
     main()
