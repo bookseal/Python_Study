@@ -1,7 +1,8 @@
 import numpy as np
 
 
-def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int | float]:
+def give_bmi(height: list[int | float],
+             weight: list[int | float]) -> list[int | float]:
     """
     Calculate BMI from height and weight lists using Numpy broadcasting.
     Formula: weight / (height ^ 2)
@@ -25,7 +26,8 @@ def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int |
         w_arr = np.array(weight)
 
         # 3. Type Validation: Ensure inputs are numeric numbers
-        # np.issubdtype checks if the array's data type is a subclass of np.number
+        # np.issubdtype checks if the array's data type is a
+        # subclass of np.number
         if not (np.issubdtype(h_arr.dtype, np.number) and
                 np.issubdtype(w_arr.dtype, np.number)):
             print("Error: Lists must contain only integers or floats.")
@@ -82,11 +84,11 @@ def main():
     print("--- Test 1: Standard Case (from PDF) ---")
     height = [2.71, 1.15]
     weight = [165.3, 38.4]
-    
+
     bmi = give_bmi(height, weight)
     print(f"BMI: {bmi}")
     print(f"Type: {type(bmi)}")
-    
+
     if bmi is not None:
         print(f"Limit check (26): {apply_limit(bmi, 26)}")
 
